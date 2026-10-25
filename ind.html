@@ -35,6 +35,38 @@ dialog{max-width:510px;width:calc(100% - 24px);max-height:91dvh;border-radius:21
 @media screen{
 .modal-content{padding-top:18px;padding-bottom:18px}.selection-title{margin-bottom:5px;line-height:1.25}.selection-meta{margin-bottom:0;line-height:1.5}.week{padding:17px 0 16px}.week h3{line-height:1.25}.week .dates{margin:4px 0 10px;line-height:1.5}.week-phase{margin-bottom:5px}.program-table{line-height:1.5}.program-table th,.program-table td{padding-top:7px;padding-bottom:7px}.program-table thead th{padding-top:6px;padding-bottom:7px}.program-table .theme-row th,.program-table .theme-row td{padding-top:9px;padding-bottom:8px}.program-table .context-row th,.program-table .context-row td{padding-top:6px;padding-bottom:6px}.program-table .session-row th,.program-table .session-row td{padding-top:10px;padding-bottom:10px}.row-duration{margin-top:2px;line-height:1.4}.task-ref{margin-bottom:3px;line-height:1.4}.task-title{line-height:1.5}.manual-page{margin-top:4px;line-height:1.4}.program-table .bilan-row th,.program-table .bilan-row td{padding-top:8px;padding-bottom:8px;line-height:1.5}.notice{margin-top:11px;margin-bottom:0;line-height:1.55}.pager{padding-top:7px}
 }
+
+/* Largeur fluide : téléphone, iPad et orientations portrait / paysage. */
+@media screen{
+:root{--page-space:clamp(20px,4vw,52px);--left-space:max(var(--page-space),env(safe-area-inset-left,0px));--right-space:max(var(--page-space),env(safe-area-inset-right,0px))}
+html{width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}body{width:100%;background:var(--paper)}
+main{width:100%;max-width:none;min-height:100dvh;margin:0;padding:0 var(--right-space) 0 var(--left-space);border-radius:0;box-shadow:none;overflow:clip}
+.hero{margin:0 calc(0px - var(--right-space)) 30px calc(0px - var(--left-space));padding:calc(27px + env(safe-area-inset-top,0px)) var(--right-space) 32px var(--left-space);border-radius:0 0 28px 0}
+.hero-line{width:100%;gap:16px}.brand{max-width:none;min-width:0}.year{flex-shrink:0}h1{font-size:clamp(34px,5.2vw,58px)}
+form,.field,.control{min-width:0}.hint{max-width:none}
+footer{padding-bottom:calc(23px + env(safe-area-inset-bottom,0px))}
+dialog{width:100%;max-width:none;height:100dvh;max-height:100dvh;margin:0;padding:0;border-radius:0;box-shadow:none;overflow-x:hidden;overflow-y:auto}
+.modal-top{padding:calc(12px + env(safe-area-inset-top,0px)) var(--right-space) 12px var(--left-space)}
+.modal-content{padding:18px var(--right-space) calc(18px + env(safe-area-inset-bottom,0px)) var(--left-space)}
+.program-table{width:100%}.program-table .label-column{width:clamp(76px,20vw,160px)}
+}
+@media screen and (min-width:700px){
+.hero{padding-bottom:37px;margin-bottom:34px}.hero-line{font-size:11px}.brand{gap:12px}.leaf{width:44px;height:44px}.year{font-size:13px}.hero-kicker{margin-top:32px;font-size:11px}.intro{font-size:16px}.colors{width:110px;margin-top:26px}
+.form-head{margin-bottom:12px}.form-head h2{font-size:27px}.quiet{font-size:13px}
+#filters{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px;align-items:start}
+#filters>.tabs,#moreGroup,#phaseGroup,#dateGroup,#monthGroup,#rangeGroup,#hint,#error,#filters>.submit{grid-column:1/-1}
+#filters:has(#weekGroup:not([hidden])) #phaseGroup,#weekGroup{grid-column:auto}
+#rangeGroup:not([hidden]){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px}
+.tabs{gap:24px;margin-bottom:26px}.tabs button{font-size:15px;min-height:52px}.tabs button[aria-pressed=true]:after{left:20%;right:20%}
+.field label{font-size:14px}.control{height:56px;font-size:17px}.hint{font-size:13px;margin-bottom:24px}.submit{font-size:16px;min-height:58px}.reopen{font-size:14px}
+footer{padding-top:38px}footer>p,summary,details p{font-size:12px}
+.modal-content{padding-top:24px}.modal-top{min-height:72px}.eyebrow{font-size:12px}.close{width:46px;min-height:46px}.selection-title{font-size:30px}.selection-meta{font-size:14px}.week h3{font-size:27px}.week .dates{font-size:14px}.week-phase{font-size:13px}.status{font-size:12px}
+.program-table .label-column{width:clamp(125px,18vw,200px)}.program-table thead th{font-size:11px;padding-top:8px;padding-bottom:9px}.program-table th{font-size:13px;padding-right:22px}.program-table .theme-row td{font-size:16px}.program-table .context-row th{font-size:12px}.program-table .context-row td{font-size:14px}.program-table .session-row th{font-size:13px}.task-title{font-size:16px}.task-ref,.manual-page,.row-duration{font-size:12px}.program-table .bilan-row th{font-size:12px}.program-table .bilan-row td{font-size:14px}.notice{font-size:12px}.pager button{font-size:14px}
+}
+@media screen and (orientation:landscape) and (max-height:600px){
+.hero{padding-top:calc(18px + env(safe-area-inset-top,0px));padding-bottom:23px;margin-bottom:22px}.hero-kicker{margin-top:18px}.colors{margin-top:17px}.modal-top{padding-top:calc(7px + env(safe-area-inset-top,0px));padding-bottom:7px;min-height:54px}.modal-content{padding-top:14px}
+}
+
 </style><!-- Embedded URW fonts — license and font embedding exception:
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: urw-base35-fonts
